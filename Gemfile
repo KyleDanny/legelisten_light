@@ -27,6 +27,19 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# HPR API
+gem 'hpr', git: 'https://github.com/legelisten/hpr.git', branch: 'ruby-3'
+
+# debugging 
+gem 'pry-byebug'
+
+# faker for seeding 
+gem 'faker'
+
+# simple form 
+gem 'simple_form'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

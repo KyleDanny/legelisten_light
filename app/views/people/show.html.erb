@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<h3> Health Professional </h3>
+<%= render @person %>
+
+<% if @person.clinics.length > 0 %>
+  <h3> Associated Clinics </h3>
+  <div>
+    <% @person.clinics.each do | clinic | %>
+      <p> Clinic: <%= clinic.name %> </p>
+
+      <% if clinic.people.length > 0 %>
+        <% clinic.people.each do | assoc_person | %>
+          <% if assoc_person.name != @person.name %>
+            <p><%= link_to assoc_person.name, assoc_person %></p>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+
+<div>
+  <%= link_to "Edit this person", edit_person_path(@person) %> |
+  <%= link_to "Back to people", people_path %>
+  <%= button_to "Destroy this person", @person, method: :delete %>
+</div>
+
+<div>
+  <%= simple_form_for [ @person, @person_clinic ] do |f| %>
+  <%= f.input :clinic_id, collection: Clinic.all, :prompt => "Select Clinic" %>
+  <%= f.submit "Add Clinic" %>
+  <% end %>
+</div>

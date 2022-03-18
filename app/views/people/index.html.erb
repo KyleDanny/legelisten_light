@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h2>Legelisten Lite</h2>
+<h1>Hjelper deg med å holde styr på helsepersonell</h1>
+<h4>Legg raskt til nye helsepersoner og administrer din egen unike database</h4>
+
+<div>
+    <div>
+      <%= form_tag people_path, method: :get do %>
+      <%= text_field_tag :search, params[:search],
+        placeholder: "Find a Health Professional" %>
+      <%= submit_tag "Search", :search => nil %>
+      <% end %>
+    </div>
+</div>
+
+<h2>Helsepersonell</h2>
+
+<div id="people">
+  <% @people.each do |person| %>
+    <%= render person %>
+    <% if person.clinics.length > 0 %>
+      <% person.clinics.each do | clinic | %>
+        <%= link_to clinic.name %>
+      <% end %>
+    <% end %>
+    <p>
+      <%= link_to "Show this person", person %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New person", new_person_path %>
