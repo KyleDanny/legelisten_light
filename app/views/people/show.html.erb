@@ -26,9 +26,4 @@
   <%= button_to "Destroy this person", @person, method: :delete %>
 </div>
 
-<div>
-  <%= simple_form_for [ @person, @person_clinic ] do |f| %>
-  <%= f.input :clinic_id, collection: Clinic.all, :prompt => "Select Clinic" %>
-  <%= f.submit "Add Clinic" %>
-  <% end %>
-</div>
+<%= render "person_clinics/new" %>

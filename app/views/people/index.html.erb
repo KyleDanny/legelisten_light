@@ -1,18 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h2>Legelisten Lite</h2>
-<h1>Hjelper deg med å holde styr på helsepersonell</h1>
-<h4>Legg raskt til nye helsepersoner og administrer din egen unike database</h4>
-
-<div>
-    <div>
-      <%= form_tag people_path, method: :get do %>
-      <%= text_field_tag :search, params[:search],
-        placeholder: "Find a Health Professional" %>
-      <%= submit_tag "Search", :search => nil %>
-      <% end %>
-    </div>
-</div>
+<%= render "people/search" %>
 
 <h2>Helsepersonell</h2>
 

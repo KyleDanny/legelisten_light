@@ -39,6 +39,10 @@ gem 'faker'
 # simple form 
 gem 'simple_form'
 
+# sass
+gem 'sass-rails'
+
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

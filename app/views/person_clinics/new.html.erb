@@ -1,8 +1,0 @@
-<%= simple_form_for [ @person, @person_clinic ] do |f| %>
-  <select>
-  <%= Clinic.all.each do |clinic| %>
-    <option value="<%= clinic.id %>"><%= clinic.name %></option>
-  <% end %>
-</select>
-<%= f.submit "Add Clinic", class: 'form-control' %>
-<% end %>
