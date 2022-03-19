@@ -29,18 +29,21 @@ class PeopleController < ApplicationController
     @person = Person.new(person_params)
     response = request_api(@person.hprId)
 
-    @person.legal_name = response.name
-    @person.birth_date = response.birth_date
-
-    respond_to do |format|
-      if @person.save
-        format.html { redirect_to person_url(@person), notice: "Person was successfully created." }
-        format.json { render :show, status: :created, location: @person }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @person.errors, status: :unprocessable_entity }
+    if response != nil
+      @person.legal_name = response.name
+      @person.birth_date = response.birth_date
+      
+      respond_to do |format|
+        if @person.save
+          format.html { redirect_to person_url(@person), notice: "Person was successfully created." }
+          format.json { render :show, status: :created, location: @person }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @person.errors, status: :unprocessable_entity }
+        end
       end
     end
+
   end
 
   # PATCH/PUT /people/1 or /people/1.json
@@ -80,5 +83,6 @@ class PeopleController < ApplicationController
     def request_api(id) 
       hpr_number = id.to_s
       scraper = Hpr.scraper(hpr_number: hpr_number)
+      rescue Exception => e
     end
 end

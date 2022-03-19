@@ -1,12 +1,22 @@
 <div id="<%= dom_id person %>">
   <p>
     <strong>Name:</strong>
-    <%= person.name %>
+    <%= link_to person.name, person %>
   </p>
 
   <p>
-    <strong>Hprid:</strong>
+    <strong>H-ID:</strong>
     <%= person.hprId %>
+  </p>
+
+  <p>
+    <strong>Practicing Name:</strong>
+    <%= person.legal_name %>
+  </p>
+
+  <p>
+    <strong>DOB:</strong>
+    <%= person.birth_date %>
   </p>
 
 </div>

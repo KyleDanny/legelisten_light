@@ -1,0 +1,86 @@
+.people-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add_new_button {
+  background-color: #3D8B34;
+  font-size: 1.2rem;
+  padding: .8rem 1.4rem;
+  margin: 1.8rem;
+  border: .5px solid green;
+  border-radius: .2rem;
+  transition: opacity 1s ease;
+  a {
+    color: white;
+  }
+}
+
+.add_new_button:hover {
+  background-color: white;
+  border: .5px solid green;
+  opacity: 1;
+  a {
+    color: green;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.cards__results {
+  text-align: left;
+  margin: .6rem 1.8rem;
+  color: grey;
+}
+
+.card {
+  border: .2rem solid rgba(0, 0, 0, 0.05);
+  border-radius: .4rem;
+  padding: 1.8rem .8rem;
+  margin: .8rem 1.8rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #0072A4;
+  }
+
+  .card__button {
+    font-size: 1.2rem;
+    padding: .8rem 1.4rem;
+    margin-top: 1.8rem;
+    background-color: #0072A4;
+    border: .5px solid #0072A4;
+    border-radius: .2rem;
+    
+    a {
+      color: white;
+    }
+  }
+
+  .card__button:hover {
+    background-color: white;
+    
+    a {
+      color: #0072A4;
+    }
+  }
+}
+
+.card:hover {
+  border: .2rem solid #0072A4;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+

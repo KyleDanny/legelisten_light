@@ -1,14 +1,16 @@
 <div class="home-container">
 
-  <div>
-    <h1 class="home-container__title--lg">LEGELISTEN</h1>
-    <h1 class="home-container__title--md">lite</h1>
-  </div>
+  <section>
+    <h1 class="home-container__title--lg font--main">LEGELISTEN</h1>
+    <h1 class="home-container__title--md">light</h1>
+  </section>
 
-  <div>
-    <h3>Hjelper deg med å holde styr på helsepersonell</h3>
-    <h4>Legg raskt til nye helsepersoner og administrer din egen unike database</h4> 
-  </div>
+  <div class="home-container__img"><%= svg 'noun-doctor' %></div>
+  
+  <section>
+    <p class="home-container__slogan">Hjelper deg med å holde styr på helsepersonell</p>
+    <%# <p class="home-container__tagline">Legg raskt til nye helsepersoner og administrer din egen unike database</p>  %>
+  </section>
 
   <%= render "people/search" %>
 

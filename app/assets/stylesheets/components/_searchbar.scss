@@ -2,26 +2,31 @@ $lightblue : #0072A4;
 
 .search {
   background-color: white;
-  border: 1px solid lightgrey;
   padding: .2rem .8rem;
   margin: .4rem 1.2rem;
-  border-radius: .4rem;
-  width: 300px;
+  
 }
 
 .search__form {
+  display: flex;
 
   .search__bar {
-    width: 90%;
-    padding: .9rem;
-    font-size: 1.2rem;
+    width: 70%;
+    padding: 1.2rem;
+    font-size: 1.5rem;
     border: none;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-radius: .4rem 0 0 .4rem;
   }
 
   .search__btn {
+    width: 20%;
     background-color: $lightblue;
     color: #FFF;
     display: inline-block;
     font-size: 1.5rem;
+    border: none;
+    border-radius: 0 .4rem .4rem 0;
   }
 }

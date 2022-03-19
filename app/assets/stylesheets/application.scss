@@ -14,10 +14,23 @@
  *= require_self
  */
 
+@import "config/fonts";
 @import "components/index";
 @import "pages/index";
 
 * {
   margin: 0px;
   padding: 0px;
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.main-container {
+  width: 100vw;
+  min-height: 90vh;
+  display: flex;
 }

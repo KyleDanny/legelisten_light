@@ -1,0 +1,17 @@
+nav {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #0072A4;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  margin-left: 2rem;
+  a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+  }
+}

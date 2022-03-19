@@ -42,6 +42,8 @@ gem 'simple_form'
 # sass
 gem 'sass-rails'
 
+# turbolinks 
+gem 'turbolinks', '~> 5.2.0'
 
 
 # Use Redis adapter to run Action Cable in production
