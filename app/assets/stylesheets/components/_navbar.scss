@@ -1,17 +1,45 @@
 nav {
   height: 10vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   background-color: #0072A4;
   border-bottom: 1px solid #ddd;
 }
 
-.logo {
+.nav__left {
   margin-left: 2rem;
+
   a {
     font-size: 2rem;
     color: white;
     text-decoration: none;
+  }
+}
+
+.nav__right {
+  margin-right: 2rem;
+
+  a {
+    color: white;
+  }
+}
+
+.add_new_button {
+  text-align: center;
+  font-size: 2rem;
+  padding: .4rem 1rem;
+  background-color: #0072A4;
+  border: 2px solid white;
+  border-radius: .4rem;
+  transition: opacity 1s ease;
+}
+
+.add_new_button:hover {
+  background-color: white;
+  border: 2px solid #0072A4;
+  opacity: 1;
+  a {
+    color: #0072A4;
   }
 }

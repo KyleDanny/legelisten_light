@@ -1,29 +1,33 @@
-<p style="color: green"><%= notice %></p>
 
-<h3> Health Professional </h3>
-<%= render @person %>
+<div class="person-container">
+<div style="color: white"><%= notice %></div>
 
-<% if @person.clinics.length > 0 %>
-  <h3> Associated Clinics </h3>
-  <div>
-    <% @person.clinics.each do | clinic | %>
-      <p> Clinic: <%= clinic.name %> </p>
+  <%= render @person %>
 
-      <% if clinic.people.length > 0 %>
-        <% clinic.people.each do | assoc_person | %>
-          <% if assoc_person.name != @person.name %>
-            <p><%= link_to assoc_person.name, assoc_person %></p>
-          <% end %>
+  <% if @person.clinics.length > 0 %>
+    <div class="person-details__clinic">
+      <p> Associated Clinics: </p>
+      <% @person.clinics.each do | clinic | %>
+        <p><%= clinic.name %> </p>
+
+        <% if clinic.people.length > 0 %>
+          <div class="person-details__clinic-tags">
+            <% clinic.people.each do | assoc_person | %>
+              <% if assoc_person.name != @person.name %>
+                <div class="person-details__clinic-tag"><%= link_to assoc_person.name, assoc_person %></div>
+              <% end %>
+            <% end %>
+          </div>
         <% end %>
       <% end %>
-    <% end %>
+    </div>
+  <% end %>
+
+  <div class="person-details__buttons">
+    <%= link_to "Redigere", edit_person_path(@person) %>
+    <%= link_to "Tilbake", people_path %>
+    <%= button_to "Slette", @person, method: :delete %>
   </div>
-<% end %>
 
-<div>
-  <%= link_to "Edit this person", edit_person_path(@person) %> |
-  <%= link_to "Back to people", people_path %>
-  <%= button_to "Destroy this person", @person, method: :delete %>
+  <%= render "person_clinics/new" %>
 </div>
-
-<%= render "person_clinics/new" %>

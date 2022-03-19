@@ -3,8 +3,7 @@ $lightblue : #0072A4;
 .search {
   background-color: white;
   padding: .2rem .8rem;
-  margin: .4rem 1.2rem;
-  
+  margin: 1.2rem 1.2rem;
 }
 
 .search__form {
@@ -15,7 +14,6 @@ $lightblue : #0072A4;
     padding: 1.2rem;
     font-size: 1.5rem;
     border: none;
-    text-align: center;
     border: 1px solid lightgrey;
     border-radius: .4rem 0 0 .4rem;
   }
@@ -28,5 +26,6 @@ $lightblue : #0072A4;
     font-size: 1.5rem;
     border: none;
     border-radius: 0 .4rem .4rem 0;
+    cursor: pointer;
   }
 }

@@ -1,14 +1,10 @@
 <nav>
-  <Image src="/logo.png" width={128} height={72} alt="" />
-
-  <div class="logo">
-    <%= link_to "LL", root_path %>
+  <div class="nav__left">
+    <%= link_to "", root_path, class: "fa-solid fa-house-medical icon-home" %>
   </div>
 
-  <div>
+  <div class="nav__right">
+    <div class="add_new_button"><%= link_to "+", new_person_path, class: "" %></div>
   </div>
 
-  <div>
-
-  </div>
 </nav>

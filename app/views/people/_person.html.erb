@@ -1,22 +1,15 @@
-<div id="<%= dom_id person %>">
-  <p>
-    <strong>Name:</strong>
-    <%= link_to person.name, person %>
-  </p>
+<div class="person-details">
+  <div class="person-details__name">
+    <h1><%= person.name %></h1>
+  </div>
 
-  <p>
-    <strong>H-ID:</strong>
-    <%= person.hprId %>
-  </p>
-
-  <p>
-    <strong>Practicing Name:</strong>
-    <%= person.legal_name %>
-  </p>
-
-  <p>
-    <strong>DOB:</strong>
-    <%= person.birth_date %>
-  </p>
-
+  <div class="person-details__legal">
+    <p>Practicing Name:</p>
+    <p><strong> <%= person.legal_name %></strong></p>
+  </div>
+  
+  <div class="person-details__birth">
+    <p>Date of Birth:</p>
+    <p><strong><%= person.birth_date %></strong></p>
+  </div>
 </div>

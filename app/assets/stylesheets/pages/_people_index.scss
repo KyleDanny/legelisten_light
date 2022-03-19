@@ -4,28 +4,6 @@
   align-items: center;
 }
 
-.add_new_button {
-  background-color: #3D8B34;
-  font-size: 1.2rem;
-  padding: .8rem 1.4rem;
-  margin: 1.8rem;
-  border: .5px solid green;
-  border-radius: .2rem;
-  transition: opacity 1s ease;
-  a {
-    color: white;
-  }
-}
-
-.add_new_button:hover {
-  background-color: white;
-  border: .5px solid green;
-  opacity: 1;
-  a {
-    color: green;
-  }
-}
-
 .cards {
   display: flex;
   flex-direction: column;
@@ -64,7 +42,7 @@
     background-color: #0072A4;
     border: .5px solid #0072A4;
     border-radius: .2rem;
-    
+
     a {
       color: white;
     }
@@ -72,7 +50,7 @@
 
   .card__button:hover {
     background-color: white;
-    
+    border: .5px solid #0072A4;
     a {
       color: #0072A4;
     }
