@@ -1,6 +1,6 @@
-<div>
+<div class="person-details__add-clinic">
   <%= simple_form_for [ @person, @person_clinic ] do |f| %>
-  <%= f.input :clinic_id, collection: Clinic.all, :prompt => "Select Clinic" %>
+  <%= f.association :clinic, collection: Clinic.all, :prompt => "Velg Clinic", label: false %>
   <%= f.submit "Add Clinic" %>
   <% end %>
 </div>

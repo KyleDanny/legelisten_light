@@ -26,8 +26,13 @@
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
+  h2 {
+    font-family: "BebasNeue";
+    font-size: 2rem;
+  }
+
   h3 {
-    font-size: 1.5em;
+    font-size: 1.3rem;
   }
 
   a {
@@ -36,8 +41,8 @@
   }
 
   .card__button {
-    font-size: 1.2rem;
-    padding: .8rem 1.4rem;
+    font-size: 1rem;
+    padding: .6rem 1.2rem;
     margin-top: 1.8rem;
     background-color: #0072A4;
     border: .5px solid #0072A4;
@@ -45,6 +50,7 @@
 
     a {
       color: white;
+      font-weight: 600;
     }
   }
 

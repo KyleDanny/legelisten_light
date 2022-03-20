@@ -1,7 +1,7 @@
  <div class="search">
-  <%= form_tag people_path, method: :get, :class => 'search__form' do %>
+  <%= form_tag people_path, method: :get, class: 'search__form' do %>
     <%= text_field_tag :search, params[:search],
-        placeholder: "Søk helsepersonell", :class => 'search__bar' %>
-    <%= submit_tag "Søk", :search => nil, :class => 'search__btn' %>
+        placeholder: "Søk helsepersonell", class: 'search__bar' %>
+    <%= submit_tag "Søk", :search => nil, class: 'search__btn' %>
   <% end %>
 </div>

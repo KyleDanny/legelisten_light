@@ -7,7 +7,7 @@
   <div class="cards__results"><p>Fant <%= @people.length %> resultater: </p></div>
     <% @people.each do |person| %>
     <div class="card">
-      <h3><%= person.name.upcase %></h3> 
+      <h2><%= person.name.upcase %></h2> 
       <% if person.clinics.length > 0 %>
         <% person.clinics.each do | clinic | %>
           <h3><%= link_to clinic.name %></h3> 

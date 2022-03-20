@@ -20,10 +20,20 @@
 
 @import "font-awesome";
 
+@font-face {
+  font-family: "BebasNeue";
+  src: font-url("BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  src: font-url("Lato-Light.ttf") format("truetype");
+}
+
 * {
   margin: 0px;
   padding: 0px;
-  font-family: Arial;
+  font-family: "Lato-Light";
 }
 
 a {

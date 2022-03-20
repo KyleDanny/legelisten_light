@@ -14,7 +14,7 @@ class PersonClinicsController < ApplicationController
       flash[:notice] = "Added successfully"
       redirect_to person_path(@person)
     else
-      render :new
+      render :_new
     end
   end
 
