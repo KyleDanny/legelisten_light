@@ -43,3 +43,20 @@ nav {
     color: #0072A4;
   }
 }
+
+/* IPAD Portrait and Landscape */
+@media screen 
+  and (min-width: 768px) 
+  and (max-width: 1199px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  
+  .nav__left {
+    margin-left: 3rem;
+    a {
+      font-size: 3rem;
+    }
+  }
+  .nav__right {
+    margin-right: 3rem;
+  }
+}

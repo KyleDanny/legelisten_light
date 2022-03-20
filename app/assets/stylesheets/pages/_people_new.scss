@@ -68,3 +68,41 @@
     border: .5px solid #0072A4;
   }
 }
+
+/* IPAD Portrait and Landscape */
+@media screen 
+  and (min-width: 768px) 
+  and (max-width: 1199px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  .new-person-container h2 {
+    font-size: 3.5rem;
+  }
+
+  .new-person__add-person {
+    width: 80%;
+
+    form {
+      width: 100%;
+    }
+
+    form div {
+      font-size: 1.8rem;
+      padding: 1rem;
+    }
+  
+    form input {
+      font-size: 1.5rem;
+      padding: .5rem;
+    }
+  }
+
+  .new-person__submit {
+    font-size: 1.5rem;
+  }
+
+  .new-person__back {
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+  }
+}

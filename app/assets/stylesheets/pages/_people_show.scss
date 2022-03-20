@@ -94,3 +94,39 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+/* IPAD Portrait and Landscape */
+@media screen 
+  and (min-width: 768px) 
+  and (max-width: 1199px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  .person-details__name {
+    font-size: 2rem;
+  }
+
+  .person-details__legal {
+    font-size: 1.8rem;
+  }
+  
+  .person-details__birth {
+    font-size: 1.8rem;
+  }
+  
+  .person-details__clinic {
+    font-size: 1.5rem;
+  }
+
+  .person-details__clinic-tag {
+    font-size: 1.2rem;
+    border-radius: 1rem;
+  }
+
+  .person-details__buttons a {
+    font-size: 1.5rem;
+  }
+
+  .person-details__buttons form button {
+    font-size: 1.5rem;
+  }
+}

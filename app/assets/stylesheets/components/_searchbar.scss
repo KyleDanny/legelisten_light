@@ -29,3 +29,23 @@ $lightblue : #0072A4;
     cursor: pointer;
   }
 }
+
+/* IPAD Portrait and Landscape */
+
+@media screen 
+  and (min-width: 768px) 
+  and (max-width: 1199px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  .search {
+    width: 80%;
+  }
+
+  .search__form .search__bar {
+    font-size: 1.8rem;
+  }
+
+  .search__form .search__btn {
+    font-size: 1.8rem;
+  }
+}
