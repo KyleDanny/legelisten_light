@@ -5,8 +5,8 @@
 
   <div class="cards__results"><p>Fant <%= @people.length %> resultater: </p></div>
 
-  <div class="laptop-home-index">
-    <%= render "shared/home" %>
+  
+    <%#= render "shared/home" %>
 
     <div class="cards" id="people">
       <% @people.each do |person| %>
@@ -21,7 +21,6 @@
       </div>
       <% end %>
     </div>
-  </div>
-
+  
 </div>
 
