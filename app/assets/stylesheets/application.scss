@@ -12,8 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require animate 
  */
 
+ 
 @import "config/fonts";
 @import "components/index";
 @import "pages/index";

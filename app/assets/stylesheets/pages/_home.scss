@@ -7,6 +7,8 @@ $lightblue : #0072A4;
   align-items: center;
   text-align: center;
   padding: 5rem 0;
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 
 .home-container__title--lg {

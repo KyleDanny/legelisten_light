@@ -48,6 +48,9 @@ gem 'font-awesome-sass'
 # turbo links 
 gem 'turbolinks'
 
+# animation 
+gem "animate.css-rails"
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
