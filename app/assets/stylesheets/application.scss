@@ -49,18 +49,3 @@ a {
   display: flex;
   justify-content: center;
 }
-
-// Laptop and Desktop
-@media screen 
-  and (min-width: 1200px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-  .laptop_size {
-    max-width: 1800px;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}

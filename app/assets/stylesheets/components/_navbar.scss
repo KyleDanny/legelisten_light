@@ -8,10 +8,10 @@ nav {
 }
 
 .nav__left {
-  margin-left: 2rem;
+  margin-left: 3rem;
 
   a {
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
     text-decoration: none;
   }
@@ -52,9 +52,6 @@ nav {
   
   .nav__left {
     margin-left: 3rem;
-    a {
-      font-size: 3rem;
-    }
   }
   .nav__right {
     margin-right: 3rem;
@@ -68,6 +65,12 @@ nav {
 
   nav {
     justify-content: space-around;
+  }
+
+  .nav__left {
+  }
+
+  .nav_right {
   }
 
   .nav__left a {

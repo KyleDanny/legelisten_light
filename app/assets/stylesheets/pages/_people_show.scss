@@ -1,10 +1,10 @@
 .person-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: #0072A4;
   color: white;
   animation: fadeInRight;
@@ -98,7 +98,6 @@
 /* IPAD Portrait and Landscape */
 @media screen 
   and (min-width: 768px) 
-  and (max-width: 1199px) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
   .person-details__name {
