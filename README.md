@@ -1,4 +1,4 @@
-# LEGELISTEN LIGHT
+# LEGELISTEN LIGHT (code test)
 
 ## Objectives
 Using Ruby on Rails, create a simple search tool for health professionals. The application should fulfill the requirements. The source code must be placed in a public repo on GitHub. The finished application should preferably run in a Docker container, or be deployable on Heroku.
