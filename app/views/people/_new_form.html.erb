@@ -1,0 +1,29 @@
+<div class="new-person__add-person">
+  <%= simple_form_for person do |f| %>
+    <% if person.errors.any? %>
+      <div style="color: red">
+        <div><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</div>
+
+        <div>
+          <% person.errors.each do |error| %>
+            <p><%= error.full_message %></p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+    <div>
+      <%= f.label "Navn:", style: "display: block", placeholder: 'eg. Anikin Skywalker' %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div>
+      <%= f.label "HPR id:", style: "display: block", placeholder: 'eg. 90717791' %>
+      <%= f.number_field :hprId %>
+    </div>
+
+    <div>
+      <%= f.button :submit, class: "new-person__submit" %>
+    </div>
+  <% end %>
+</div>

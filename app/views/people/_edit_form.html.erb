@@ -2,24 +2,19 @@
   <%= simple_form_for person do |f| %>
     <% if person.errors.any? %>
       <div style="color: red">
-        <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
+        <div><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</div>
 
-        <ul>
+        <div>
           <% person.errors.each do |error| %>
-            <li><%= error.full_message %></li>
+            <p><%= error.full_message %></p>
           <% end %>
-        </ul>
+        </div>
       </div>
     <% end %>
 
     <div>
-      <%= f.label "Navn:", style: "display: block" %>
+      <%= f.label "Navn:", style: "display: block", placeholder: 'eg. Anikin Skywalker' %>
       <%= f.text_field :name %>
-    </div>
-
-    <div>
-      <%= f.label "HPR id:", style: "display: block" %>
-      <%= f.number_field :hprId %>
     </div>
 
     <div>

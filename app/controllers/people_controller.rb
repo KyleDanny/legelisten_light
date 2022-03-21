@@ -4,49 +4,47 @@ require "pry-byebug"
 class PeopleController < ApplicationController
   before_action :set_person, only: %i[ show edit update destroy ]
 
-  # GET /people or /people.json
   def index   
     @people = Person.search(params[:search])
   end
 
-  # GET /people/1 or /people/1.json
   def show
     @people = Person.all
     @person_clinic = PersonClinic.new
   end
 
-  # GET /people/new
   def new
     @person = Person.new
   end
 
-  # GET /people/1/edit
   def edit
   end
 
-  # POST /people or /people.json
   def create
-    @person = Person.new(person_params)
-    response = request_api(@person.hprId)
-
-    if response != nil
-      @person.legal_name = response.name
-      @person.birth_date = response.birth_date
+      @person = Person.new(person_params)
       
-      respond_to do |format|
-        if @person.save
-          format.html { redirect_to person_url(@person), notice: "Person was successfully created." }
-          format.json { render :show, status: :created, location: @person }
-        else
+      if @person.valid?
+        response = request_api(@person.hprId)
+        
+        if response == "InvalidHprNumberError"
+          @person.legal_name = response.name
+          @person.birth_date = response.birth_date
+          
+          respond_to do |format|
+            if @person.save
+              format.html { redirect_to person_url(@person), notice: "Person was successfully created." }
+              format.json { render :show, status: :created, location: @person }
+            end
+          end
+        end
+      else 
+        respond_to do |format|
           format.html { render :new, status: :unprocessable_entity }
           format.json { render json: @person.errors, status: :unprocessable_entity }
         end
       end
-    end
-
   end
 
-  # PATCH/PUT /people/1 or /people/1.json
   def update
     respond_to do |format|
       if @person.update(person_params)
@@ -59,30 +57,32 @@ class PeopleController < ApplicationController
     end
   end
 
-  # DELETE /people/1 or /people/1.json
   def destroy
     @person.destroy
 
     respond_to do |format|
-      format.html { redirect_to people_url, notice: "Person was successfully destroyed." }
+      format.html { redirect_to people_url, notice: "Person was successfully removed." }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_person
       @person = Person.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def person_params
       params.require(:person).permit(:name, :hprId)
     end
 
     def request_api(id) 
-      hpr_number = id.to_s
-      scraper = Hpr.scraper(hpr_number: hpr_number)
-      rescue Exception => e
+      begin
+        hpr_number = id.to_s
+        scraper = Hpr.scraper(hpr_number: hpr_number)
+      rescue => error
+        error.message
+        error
+      end
     end
+
 end
