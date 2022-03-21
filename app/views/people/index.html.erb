@@ -1,24 +1,24 @@
-<div class="people-container">
+<main class="people-container">
   <div style="color: #0072A4"><%= notice %></div>
   
   <%= render "people/search" %>
 
   <div class="cards__results"><p>Fant <%= @people.length %> resultater: </p></div>
-    <%#= render "shared/home" %>
-
-    <div class="cards" id="people">
-      <% @people.each do |person| %>
-      <div class="card">
-        <h2><%= person.name.upcase %></h2> 
+    
+  <section class="cards" id="people">
+    <% @people.each do |person| %>
+    <article class="card">
+      <h2><%= person.name.upcase %></h2> 
+      <div>
         <% if person.clinics.length > 0 %>
           <% person.clinics.each do | clinic | %>
             <h3><%= link_to clinic.name %></h3> 
           <% end %>
         <% end %>
-        <button class="card__button"><%= link_to "Detaljer", person %></button>
       </div>
-      <% end %>
-    </div>
-  
-</div>
+      <button class="card__button"><%= link_to "Detaljer", person %></button>
+    </article>
+    <% end %>
+  </section>
+</main>
 

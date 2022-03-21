@@ -1,10 +1,11 @@
-<div class="new-person-container">
+<section class="new-person-container">
   <h2>Legg til Helsepersonell</h2>
+  <p class="home-container__tagline">Legg raskt til nye helsepersoner og administrer din egen unike database</p>
 
   <%= render "new_form", person: @person %>
 
   <div>
     <%= link_to "Tilbake", people_path, class: "new-person__back" %>
   </div>
-</div>
+</section>
 

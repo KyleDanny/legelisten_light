@@ -4,8 +4,6 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  animation: fadeInRight;
-  animation-duration: .5s;
 
   h2 {
     font-size: 2rem;
@@ -46,6 +44,7 @@
   border-radius: .2rem;
   color: #0072A4;
   font-weight: 600;
+  cursor: pointer;
 
   &:hover {
     background-color: #0072A4;

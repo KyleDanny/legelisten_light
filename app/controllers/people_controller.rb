@@ -21,28 +21,28 @@ class PeopleController < ApplicationController
   end
 
   def create
-      @person = Person.new(person_params)
+    @person = Person.new(person_params)
       
-      if @person.valid?
-        response = request_api(@person.hprId)
+    if @person.valid?
+      response = request_api(@person.hprId)
 
-        if response.class != Hpr::InvalidHprNumberError
-          @person.legal_name = response.name
-          @person.birth_date = response.birth_date
-          
-          respond_to do |format|
-            if @person.save
-              format.html { redirect_to person_url(@person), notice: "Person was successfully created." }
-              format.json { render :show, status: :created, location: @person }
-            end
+      if response.class != Hpr::InvalidHprNumberError
+        @person.legal_name = response.name
+        @person.birth_date = response.birth_date
+        
+        respond_to do |format|
+          if @person.save
+            format.html { redirect_to person_url(@person), notice: "Person was successfully created." }
+            format.json { render :show, status: :created, location: @person }
           end
         end
-      else 
-        respond_to do |format|
-          format.html { render :new, status: :unprocessable_entity }
-          format.json { render json: @person.errors, status: :unprocessable_entity }
-        end
       end
+    else 
+      respond_to do |format|
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @person.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def update
@@ -80,9 +80,7 @@ class PeopleController < ApplicationController
         hpr_number = id.to_s
         scraper = Hpr.scraper(hpr_number: hpr_number)
       rescue => error
-        error.message
         error
       end
     end
-
 end

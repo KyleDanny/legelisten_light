@@ -1,6 +1,5 @@
-
-<div class="person-container">
-<div style="color: white"><%= notice %></div>
+<main class="person-container">
+  <div style="color: white"><%= notice %></div>
 
   <%= render @person %>
 
@@ -25,10 +24,10 @@
   
   <%= render "person_clinics/new" %>
 
-  <div class="person-details__buttons">
+  <section class="person-details__buttons">
     <%= link_to "Redigere", edit_person_path(@person) %>
     <%= link_to "Tilbake", people_path %>
     <%= button_to "Slette", @person, :confirm => 'Bekrefte', method: :delete %>
-  </div>
+  </section>
 
-</div>
+</main>

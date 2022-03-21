@@ -1,5 +1,3 @@
-require "pry"
-
 class PersonClinicsController < ApplicationController
   
   def new
