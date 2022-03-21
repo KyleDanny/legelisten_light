@@ -10,9 +10,9 @@ eagerLoadControllersFrom("controllers", application)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
 
-import { laptopSizeRemoveElement,laptopSizeAddElement } from "controllers/helper_functions"
+// import { laptopSizeRemoveElement,laptopSizeAddElement } from "controllers/helper_functions"
 
-const home = document.getElementById('home');
+// const home = document.getElementById('home');
 
-laptopSizeAddElement(home);
-laptopSizeRemoveElement(home);
+// laptopSizeAddElement(home);
+// laptopSizeRemoveElement(home);
