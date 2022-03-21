@@ -5,39 +5,44 @@ class PeopleTest < ApplicationSystemTestCase
     @person = people(:one)
   end
 
+  test "should not save person without title" do
+    person = Person.new
+    assert_not person.save
+  end
+
   test "visiting the index" do
     visit people_url
-    assert_selector "h1", text: "People"
+    assert_selector "p", text: "resultater:"
   end
 
   test "should create person" do
     visit people_url
-    click_on "New person"
+    click_on "+"
 
-    fill_in "Hprid", with: @person.hprId
-    fill_in "Name", with: @person.name
+    fill_in "person[name]", with: @person.name
+    fill_in "person[hprId]", with: @person.hprId
+
     click_on "Create Person"
 
     assert_text "Person was successfully created"
-    click_on "Back"
+    click_on "Tilbake"
   end
 
   test "should update Person" do
     visit person_url(@person)
-    click_on "Edit this person", match: :first
+    click_on "Redigere", match: :first
 
-    fill_in "Hprid", with: @person.hprId
-    fill_in "Name", with: @person.name
+    fill_in "person[name]", with: @person.name
     click_on "Update Person"
 
     assert_text "Person was successfully updated"
-    click_on "Back"
+    click_on "Tilbake"
   end
 
   test "should destroy Person" do
     visit person_url(@person)
-    click_on "Destroy this person", match: :first
+    click_on "Slette", match: :first
 
-    assert_text "Person was successfully destroyed"
+    assert_text "Person was successfully removed"
   end
 end

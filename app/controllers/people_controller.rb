@@ -25,8 +25,7 @@ class PeopleController < ApplicationController
       
       if @person.valid?
         response = request_api(@person.hprId)
-        
-        if response == "InvalidHprNumberError"
+        if response != "InvalidHprNumberError"
           @person.legal_name = response.name
           @person.birth_date = response.birth_date
           
