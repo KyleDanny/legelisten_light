@@ -5,7 +5,7 @@ Using Ruby on Rails, create a simple search tool for health professionals. The a
 
 ## Legelisten Light - Up and Running! 
 
-Alternatively: [Legelisten Light](https://legelisten-light.herokuapp.com/people)
+Alternatively: [Legelisten Light](https://legelisten-light.herokuapp.com/)
 
 ## Stack
 - Ruby on Rails
